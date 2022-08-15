@@ -5,4 +5,5 @@
 }}
 
 select *
-from raw.globalmart.product
+from {{ source('globalmart', 'product') }}
+-- from raw.globalmart.product (connection directly to snowflake cloud db)
